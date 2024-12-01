@@ -2,24 +2,30 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
     <groupId>Nov2022POMSeries</groupId>
     <artifactId>Nov2022POMSeries</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>17</maven.compiler.source> <!-- Updated Java version -->
-        <maven.compiler.target>17</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source> <!-- Adjust if needed -->
+        <maven.compiler.target>17</maven.compiler.target> <!-- Adjust if needed -->
         <extentreports-version>5.0.8</extentreports-version>
         <aspectj.version>1.9.19</aspectj.version>
         <allure.version>2.22.1</allure.version>
     </properties>
-<dependency>
-    <groupId>org.springframework</groupId>
-    <artifactId>spring-context</artifactId>
-    <version>5.3.30</version> <!-- Replace with the latest version compatible with your project -->
-</dependency>
 
+    <dependencies>
+        <!-- Your dependencies should be placed here -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>5.3.30</version> <!-- Use an appropriate version -->
+        </dependency>
+
+        <!-- Other dependencies as required -->
+    </dependencies>
 
     <build>
         <plugins>
@@ -30,29 +36,9 @@
                 <configuration>
                     <source>${maven.compiler.source}</source>
                     <target>${maven.compiler.target}</target>
-                    <compilerArgs>
-                        <arg>--add-exports</arg>
-                        <arg>jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED</arg>
-                    </compilerArgs>
                 </configuration>
             </plugin>
-
-            <!-- Your other plugins -->
         </plugins>
     </build>
 
-    <reporting>
-        <excludeDefaults>true</excludeDefaults>
-        <plugins>
-            <plugin>
-                <groupId>io.qameta.allure</groupId>
-                <artifactId>allure-maven</artifactId>
-                <version>2.10.0</version>
-                <configuration>
-                    <reportVersion>${allure.version}</reportVersion>
-                    <resultsDirectory>${project.basedir}/allure-results</resultsDirectory>
-                </configuration>
-            </plugin>
-        </plugins>
-    </reporting>
 </project>
