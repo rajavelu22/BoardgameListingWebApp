@@ -14,16 +14,12 @@
         <aspectj.version>1.9.19</aspectj.version>
         <allure.version>2.22.1</allure.version>
     </properties>
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-context</artifactId>
+    <version>5.3.30</version> <!-- Replace with the latest version compatible with your project -->
+</dependency>
 
-    <dependencies>
-        <!-- Your existing dependencies -->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.30</version> <!-- Updated Lombok version -->
-            <scope>provided</scope>
-        </dependency>
-    </dependencies>
 
     <build>
         <plugins>
